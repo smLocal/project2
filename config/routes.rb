@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   root 'users#index'
 
-  get 'sessions/new'
+  get 'categories' => 'categories#new'
+
+  get 'new' => 'items#new'
+  get 'items' => 'items#index'
 
   get 'signup' => 'users#new'
   post 'signup' => 'users#create'

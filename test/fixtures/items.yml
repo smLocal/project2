@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item_id: false
+  item_name: MyString
+  quantity: 1
+  season: MyString
+  case_price: 1
+  unit_price: 1
+  category_id: 1
+
+two:
+  item_id: false
+  item_name: MyString
+  quantity: 1
+  season: MyString
+  case_price: 1
+  unit_price: 1
+  category_id: 1
