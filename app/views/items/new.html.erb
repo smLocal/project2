@@ -1,2 +1,26 @@
-<h1>Items#new</h1>
-<p>Find me in app/views/items/new.html.erb</p>
+<!-- create_table "items", force: :cascade do |t|
+    t.boolean  "item_id"
+    t.string   "item_name"
+    t.integer  "quantity"
+    t.string   "season"
+    t.integer  "case_price"
+    t.integer  "unit_price"
+    t.integer  "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end -->
+
+
+<h1></h1>
+
+<%= form_for @item do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+
+  <%= f.label :quantity %>
+  <%= f.text_field :quantity %>
+  <%= f.submit %>
+
+
+<% end %>

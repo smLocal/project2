@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   get 'categories' => 'categories#new'
 
-  get 'new' => 'items#new'
+
+  post "/items" => 'items#create'
+  get 'items/new' => 'items#new'
   get 'items' => 'items#index'
 
   get 'signup' => 'users#new'
