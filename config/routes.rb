@@ -1,15 +1,19 @@
 Rails.application.routes.draw do
   root 'users#index'
 
-  get 'categories' => 'categories#new'
+  resources :items
+  resources :users
+  resources :categories
+
+  # get 'categories' => 'categories#new'
 
 
-  post "/items" => 'items#create'
-  get 'items/new' => 'items#new'
-  get 'items' => 'items#index'
+  # post "/items" => 'items#create'
+  # get 'items/new' => 'items#new'
+  # get 'items' => 'items#index'
 
-  get 'signup' => 'users#new'
-  post 'signup' => 'users#create'
+  # get 'signup' => 'users#new'
+  # post 'signup' => 'users#create'
 
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
