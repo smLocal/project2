@@ -7,12 +7,17 @@
 
   <% end %>
   </ul>
+  <%= link_to 'Items', items_path %>
+  <br>
+  <br>
+
   <form action="/logout" method="post">
     <input name="_method" value="DELETE" type="hidden">
       <button>Logout</button>
     <!-- </input> -->
   </form>
 <% else %>
+  <%= link_to 'Items', items_path %>
   <a href="/login">Login</a>
   <a href="/signup">Sign Up</a>
 <% end %>

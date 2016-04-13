@@ -5,6 +5,14 @@ Rails.application.routes.draw do
   resources :users
   resources :categories
 
+  resources :items do
+  member do
+    get :sell
+    patch :sell
+
+  end
+end
+
   # get 'categories' => 'categories#new'
 
 

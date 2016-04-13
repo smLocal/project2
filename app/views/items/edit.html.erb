@@ -1,15 +1,12 @@
 
 <!-- create_table "items", force: :cascade do |t|
-    t.boolean  "item_id"
-    t.string   "item_name"
+    t.string   "name"
     t.integer  "quantity"
-    t.string   "season"
     t.integer  "case_price"
     t.integer  "unit_price"
-    t.integer  "category_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string  "category"
   end -->
+<h1>Item.edit page</h1>
 
 <% if current_user.is_admin %>
 
@@ -45,17 +42,19 @@
   <% end %>
 
 <% else %>
-
-    <%= form_for @item do |f| %>
-    <div>
-      <%= f.label :quantity %>
+<!-- <form action="/items/:id/sell" method="sell">
+    <input type="number" id ="user_input"/>
+      <button>Sell</button>
+  </form>
+ -->
+<%= form_for @item, :url => { :action => "sell" } do |f| %>
+  Sold: <%= f.label :quantity %>
       <%= f.number_field :quantity %>
-    </div>
-    <div>
-      <%= f.submit %>
-    </div>
-
-
+<%= f.submit %>
   <% end %>
+<form action="/logout" method="post">
+  <input name="_method" value="DELETE" type="hidden">
+  <button>Logout</button>
+</form>
 
 <% end %>

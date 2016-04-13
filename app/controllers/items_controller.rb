@@ -43,11 +43,16 @@ class ItemsController < ApplicationController
     redirect_to '/items'
   end
 
-  def sell(user_input)
-    @item = Iten.find(params[:id])
-    @item.quantity = item_params[:quantity] - user_input
-
+  def sell
+    @item = Item.find(params[:id])
+    @item.quantity = @item.quantity.to_i - item_params[:quantity].to_i
+    @item.save
+    redirect_to items_path
   end
+
+      # @item = Item.find(params[:id])
+
+    # @item.quantity = item_params[:quantity] - user_input
 
   def destroy
     @item = Item.find(params[:id])

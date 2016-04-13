@@ -1,4 +1,4 @@
-<h1>Items#index</h1>
+<h1>Items#index I promise</h1>
 <p>Find me in app/views/items/index.html.erb</p>
 <!-- items -->
 <!-- t.string   "name"
@@ -15,6 +15,10 @@
       <th>Case Price</th>
       <th>Unit Price</th>
       <th>Category</th>
+      <% if current_user.is_admin %>
+      <th><%= link_to 'New Item', new_item_path %></th>
+      <% else%>
+      <% end %>
     </tr>
   </thead>
   <tbody>
@@ -27,15 +31,17 @@
         <td><%= item.category %></td>
         <td><%= link_to 'Edit', edit_item_path(item) %></td>
         <% if current_user.is_admin %>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-       <% else %>
-       <% end %>
+          <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+        <% else %>
+          <% if !!current_user%>
+            Sign up
+        <% end %>
+    <% end %>
     <% end %>
   </tbody>
 </table>
- <form action="/logout" method="post">
+  <form action="/logout" method="post">
     <input name="_method" value="DELETE" type="hidden">
       <button>Logout</button>
-    <!-- </input> -->
   </form>
