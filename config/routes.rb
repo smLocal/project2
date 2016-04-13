@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   # get 'items' => 'items#index'
 
   get 'signup' => 'users#new'
-  # post 'signup' => 'users#create'
+  post 'signup' => 'users#create'
 
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'

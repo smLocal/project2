@@ -26,14 +26,27 @@ class ItemsController < ApplicationController
   def edit
     @item = Item.find(params[:id])
   end
-
+ # @item = Item.find(params[:id])
+ #    byebug
+ #    if (item.item_params["quantity"] == "") {
+ #      @item.category = item_params["category"]
   def update
     @item = Item.find(params[:id])
-    if @item.update_attributes(item_params)
-      redirect_to '/items'
-    else
-      render :edit
+    @item.name = item_params[:name]
+    @item.quantity = item_params[:quantity]
+    @item.case_price = item_params[:case_price]
+    @item.unit_price = item_params[:unit_price]
+    if item_params[:category] != ""
+      @item.category = item_params[:category]
     end
+    @item.save
+    redirect_to '/items'
+  end
+
+  def sell(user_input)
+    @item = Iten.find(params[:id])
+    @item.quantity = item_params[:quantity] - user_input
+
   end
 
   def destroy

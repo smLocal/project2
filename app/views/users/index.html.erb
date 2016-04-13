@@ -3,7 +3,7 @@
 <% if current_user %>
 <ul>
   <% @users.each do |user| %>
-    <li><h3>Manager Logins:</h3> <%= user.email %> - <%= user.password_digest %></li>
+    <li><h3>Signed up User:</h3> <%= user.email %> - <%= user.password_digest %></li>
 
   <% end %>
   </ul>
