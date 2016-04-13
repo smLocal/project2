@@ -8,7 +8,7 @@
   end -->
 <h1>Item.edit page</h1>
 
-<% if current_user.is_admin %>
+<% if current_user && current_user.is_admin %>
 
   <h1>edit.html for items</h1>
 
@@ -52,6 +52,10 @@
       <%= f.number_field :quantity %>
 <%= f.submit %>
   <% end %>
+<br>
+<%= link_to 'Back', items_path %>
+<br>
+<br>
 <form action="/logout" method="post">
   <input name="_method" value="DELETE" type="hidden">
   <button>Logout</button>
