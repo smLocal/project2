@@ -1,0 +1,30 @@
+
+<h1>_form.html for items</h1>
+
+<%= form_for @item do |f| %>
+
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :roast %>
+    <%= f.text_field :roast %>
+  </div>
+
+  <div>
+    <%= f.label :origin %>
+    <%= f.text_field :origin %>
+  </div>
+
+  <div>
+    <%= f.label :quantity %>
+    <%= f.number_field :quantity, :step => 'any' %>
+  </div>
+
+  <%= f.submit %>
+
+<% end %>
+
+<%= link_to "Back to the list!", beans_path %>

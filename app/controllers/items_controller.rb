@@ -19,14 +19,33 @@ class ItemsController < ApplicationController
     @item = Item.new
   end
 
-  def edit
+  def show
 
+  end
+
+  def edit
+    @item = Item.find(params[:id])
+  end
+
+  def update
+    @item = Item.find(params[:id])
+    if @item.update_attributes(item_params)
+      redirect_to '/items'
+    else
+      render :edit
+    end
   end
 
   def destroy
     @item = Item.find(params[:id])
     @item.destroy
     redirect_to items_path
+  end
+
+private
+  def item_params
+    params.require(:item).permit(:name, :quantity, :case_price, :unit_price, :category)
+
   end
 
 end
