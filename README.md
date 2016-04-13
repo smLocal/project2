@@ -3,9 +3,6 @@
 
 https://trello.com/b/XVC3AVuG/farmers-market-freshbase
 
-##Database will be for this open air farmers market in Louisiana
-http://southsideproducemarket.com/chart_seasonal.php
-
 ##About FreshBase
 I'm making an inventory control system for a farmers market in New Orleans.
 There will be multiple users: managers, employees and customers.
@@ -38,6 +35,3 @@ can affect the databases differently or be locked out of making certain changes.
 * I want to learn how be able to let users purchase online.
 * I want a cart for users to place and track multiple items.
 * I want to dip my toes in the css hole or have a ux person make my app sexy af.
-
-
-
