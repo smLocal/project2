@@ -15,6 +15,15 @@
       <th>Unit Price</th>
       <th>Category</th>
 
+        <%= form_tag items_path, :method => 'get' do %>
+    <p>
+    <--<%= select :search, options_for_select([["Select One", ""], "veggies", "fruit", "spreads"]), params[:search]  %>-->
+    <!-- <%= text_field_tag :search, params[:search] %> -->
+    <%= submit_tag "Search", :name => :nil %>
+
+  </p>
+<% end %>
+
       <% if current_user && current_user.is_admin %>
       <th><%= link_to 'New Item', new_item_path %></th>
       <% else%>
@@ -22,6 +31,9 @@
     </tr>
   </thead>
   <tbody>
+
+
+
     <% @items.each do |item| %>
       <tr>
         <td><strong><%= item.name %></strong></td>
@@ -42,9 +54,4 @@
 </table>
 
   <%= link_to 'Home', users_path %>
-  <br>
-  <br>
-  <form action="/logout" method="post">
-    <input name="_method" value="DELETE" type="hidden">
-      <button>Logout</button>
-  </form>
+

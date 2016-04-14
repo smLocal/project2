@@ -20,4 +20,26 @@ class UsersController < ApplicationController
         render :new
       end
   end
+
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    @user.name = user_params[:is_admin]
+    if user_params[:is_admin] != ""
+      @user.is_admin = user_params[:is_admin]
+    end
+    @user.save
+    redirect_to '/users'
+
+  end
+
+private
+  def user_params
+    params.require(:user).permit(:email, :password, :password_confirmation, :is_admin)
+
+  end
+
 end

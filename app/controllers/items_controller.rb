@@ -1,6 +1,16 @@
 class ItemsController < ApplicationController
   def index
-    @items = Item.all
+
+
+
+    if params[:search]
+      searchword = params[:search]
+      @items = Item.where(category: searchword)
+    else
+      @items = Item.all
+    end
+
+
   end
 
   def create
