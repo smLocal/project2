@@ -35,7 +35,7 @@
         <td><%= item.quantity %></td>
         <td><%= item.case_price %></td>
         <td><%= item.unit_price %></td>
-        <td><%= item.category %></td>
+        <td><%= item.category.name %></td>
         <% if current_user %>
         <td><%= link_to 'Edit', edit_item_path(item) %></td>
           <% end%>

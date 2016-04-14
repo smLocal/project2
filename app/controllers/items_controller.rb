@@ -5,7 +5,8 @@ class ItemsController < ApplicationController
       @items = Item.all
     elsif params[:search]
       searchword = params[:search]
-      @items = Item.where(category: searchword)
+      @category = Category.find_by(name: searchword)
+      @items = Item.where(category_id: @category.id)
     else
       @items = Item.all
     end

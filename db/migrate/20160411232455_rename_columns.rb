@@ -3,3 +3,4 @@ class RenameColumns < ActiveRecord::Migration
     rename_column :items, :type, :category
   end
 end
+
