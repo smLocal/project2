@@ -11,7 +11,7 @@
   end -->
   <h1>new.html for items</h1>
 
-<% if current_user.is_admin %>
+<% if current_user && current_user.is_admin %>
 
   <%= form_for @item do |f| %>
     <div>
