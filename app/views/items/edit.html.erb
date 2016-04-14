@@ -6,11 +6,11 @@
     t.integer  "unit_price"
     t.string  "category"
   end -->
-<h1>Item.edit page</h1>
+<h1>Items edit.html for items</h1>
+
 
 <% if current_user && current_user.is_admin %>
 
-  <h1>edit.html for items</h1>
 
   <%= form_for @item do |f| %>
     <div>
@@ -44,11 +44,6 @@
 
 <% else %>
 
-<!-- <form action="/items/:id/sell" method="sell">
-    <input type="number" id ="user_input"/>
-      <button>Sell</button>
-  </form>
- -->
 <%= form_for @item, :url => { :action => "sell" } do |f| %>
   Sold: <%= f.label :quantity %>
       <%= f.select :quantity, options_for_select(0..500), { prompt: "Sold Amount" } %>

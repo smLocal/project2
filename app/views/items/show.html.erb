@@ -1,0 +1,12 @@
+<h1>Items----Show.html</h1>
+
+<h1><%= @item.name %></h1>
+
+<p>
+  We currently stock <%= @item.quantity %> of this <%= @item.category %> at
+  <%= @item.case_price %> a case, which translates to <%= @item.unit_price %> each.
+  To edit (and get all this info on the same page), click edit in Total Items.
+</p>
+
+<%= link_to "Back to Total Items", items_path %>
+

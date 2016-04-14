@@ -1,16 +1,18 @@
 class ItemsController < ApplicationController
   def index
 
-
-
-    if params[:search]
+    if params[:search] == "All"
+      @items = Item.all
+    elsif params[:search]
       searchword = params[:search]
       @items = Item.where(category: searchword)
     else
       @items = Item.all
     end
-
-
+                          # first hash is for user, second
+    @search_options = [["Select One", ""],["All", "All"], ["veggies", "veggies"],["fruit", "fruit"],["spreads", "spreads"] ]
+    # Item.where(category: ["fruit","veggies", "spreads"])
+    # this is how you select all from category
   end
 
   def create
@@ -30,6 +32,7 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @item = Item.find(params[:id])
 
   end
 
@@ -77,9 +80,3 @@ private
   end
 
 end
-# t.string   "name"
-#     t.integer  "quantity"
-#     t.integer  "case_price"
-#     t.integer  "unit_price"
-#     t.integer  "category_id"
-#     t.string   "category"
