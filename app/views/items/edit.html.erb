@@ -49,7 +49,8 @@
  -->
 <%= form_for @item, :url => { :action => "sell" } do |f| %>
   Sold: <%= f.label :quantity %>
-      <%= f.number_field :quantity %>
+      <%= f.select :quantity, options_for_select(0..500), { prompt: "Sold Amount" } %>
+      <!-- http://stackoverflow.com/questions/10038993/rails-and-forms-drop-down-with-range-of-numbers-and-unlimited -->
 <%= f.submit %>
   <% end %>
 <br>

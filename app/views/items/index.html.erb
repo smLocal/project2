@@ -40,6 +40,10 @@
     <% end %>
   </tbody>
 </table>
+
+  <%= link_to 'Home', users_path %>
+  <br>
+  <br>
   <form action="/logout" method="post">
     <input name="_method" value="DELETE" type="hidden">
       <button>Logout</button>

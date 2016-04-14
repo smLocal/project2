@@ -3,14 +3,13 @@
 <% if current_user %>
 <ul>
   <% @users.each do |user| %>
-    <li><h3>Signed up User:</h3> <%= user.email %> - <%= user.password_digest %></li>
+    <li><h3>Signed up User:</h3> <%= user.email %> - <%= user.password_digest %> - <%= user.is_admin %></li>
 
   <% end %>
   </ul>
   <%= link_to 'Items', items_path %>
   <br>
   <br>
-
   <form action="/logout" method="post">
     <input name="_method" value="DELETE" type="hidden">
       <button>Logout</button>
