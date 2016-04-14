@@ -10,7 +10,7 @@ class ItemsController < ApplicationController
       @items = Item.all
     end
                           # first hash is for user, second
-    @search_options = [["Select One", ""],["All", "All"], ["veggies", "veggies"],["fruit", "fruit"],["spreads", "spreads"] ]
+    @search_options = [["Select One", "All"],["All", "All"], ["veggies", "veggies"],["fruit", "fruit"],["spreads", "spreads"] ]
     # Item.where(category: ["fruit","veggies", "spreads"])
     # this is how you select all from category
   end
