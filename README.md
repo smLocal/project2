@@ -36,7 +36,7 @@ another set also for users, too.
 * I want different kinds of users like managers and customers and employees that
 can affect the databases differently or be locked out of making certain changes.
 
-##Technologies used
+##Technologies used:
 *Ruby on Rails
 *Embedded Ruby 
 *Bootstrap
@@ -44,6 +44,6 @@ can affect the databases differently or be locked out of making certain changes.
 *PostgreSQL
 *
 
-##Different for next time
+##Different for next time:
 *I would make sure my models were done correctly on the day I created them.
 **That means double checking my ERDs are done correctly
