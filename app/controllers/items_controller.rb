@@ -17,12 +17,13 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.create(name:params[:item][:name],
+    category_name = params[:item][:category]
+    @category = Category.find_by(name: category_name)
+    @item = @category.items.create(
+        name:params[:item][:name],
         quantity:params[:item][:quantity],
         case_price:params[:item][:case_price],
-        unit_price:params[:item][:unit_price],
-        category_id:params[:item][:category_id],
-        category:params[:item][:category],
+        unit_price:params[:item][:unit_price]
         )
     redirect_to '/items'
   end
@@ -30,6 +31,7 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
+
   end
 
   def show
@@ -51,7 +53,8 @@ class ItemsController < ApplicationController
     @item.case_price = item_params[:case_price]
     @item.unit_price = item_params[:unit_price]
     if item_params[:category] != ""
-      @item.category = item_params[:category]
+      @category = Category.find_by(name: item_params[:category])
+      @item.category_id = @category.id
     end
     @item.save
     redirect_to '/items'

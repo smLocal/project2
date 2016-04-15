@@ -8,22 +8,25 @@
 </head>
 <body>
 
-<% if current_user %>
-  <form action="/logout" method="post">
-      <input name="_method" value="DELETE" type="hidden">
-      <button>Logout</button>
-  </form>
 
-  <% else%>
-  <form action="/login" method="get">
-    <input name="_method" value="new" type="hidden">
-    <button>Login</button>
-  </form>
-  <br>
-  <form action="/signup" method="get">
-    <input name="_method" value="new" type="hidden">
-    <button>Signup</button>
-  </form>
+  <%= link_to 'Home', users_path %>
+
+  <% if current_user %>
+    <form action="/logout" method="post">
+        <input name="_method" value="DELETE" type="hidden">
+        <button>Logout</button>
+    </form>
+
+    <% else%>
+    <form action="/login" method="get">
+      <input name="_method" value="new" type="hidden">
+      <button>Login</button>
+    </form>
+    <br>
+    <form action="/signup" method="get">
+      <input name="_method" value="new" type="hidden">
+      <button>Signup</button>
+    </form>
 <% end %>
 
 <%= yield %>

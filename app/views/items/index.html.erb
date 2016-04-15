@@ -23,7 +23,7 @@
       <% end %>
 
       <% if current_user && current_user.is_admin %>
-        <th><%= link_to 'New Item', new_item_path %></th>
+        <th><%= link_to 'New Item', new_item_path, :class => 'btn btn-warning btn-xs active' %></th>
       <% end %>
     </tr>
   </thead>
@@ -40,12 +40,11 @@
         <td><%= link_to 'Edit', edit_item_path(item) %></td>
           <% end%>
         <% if current_user && current_user.is_admin %>
-          <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Delete Item', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<%= link_to 'Home', users_path %>
 
