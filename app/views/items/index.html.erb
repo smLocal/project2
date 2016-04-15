@@ -37,7 +37,7 @@
   <tbody>
     <% @items.each do |item| %>
       <tr>
-        <td><strong><%= item.name %></strong></td>
+        <td><strong><%= link_to item.name, item_path(item) %></strong></td>
         <td><%= item.quantity %></td>
         <td><%= item.case_price %></td>
         <td><%= item.unit_price %></td>
