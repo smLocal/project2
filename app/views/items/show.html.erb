@@ -1,10 +1,10 @@
-<h1><%= @item.name %></h1>
+<h1 class="center food-table col-md-8 col-md-offset-2 col-xs-12"><%= @item.name %></h1>
 
-<p class="showy">
+<p class="showy food-table col-md-8 col-md-offset-2 col-xs-12">
   We currently stock <%= @item.quantity %> of this <%= @item.category %> at
   <%= @item.case_price %> a case, which translates to <%= @item.unit_price %> each.
   To edit (and get all this info on the same page), click edit in Total Items.
 </p>
 
-<%= link_to "Back to Total Items", items_path, :class => 'btn btn-warning btn-md active col-xs-2 col-md-2' %>
+<%= link_to "Back to Total Items", items_path, :class => 'btn btn-warning btn-md active col-md-offset-10 col-xs-5 col-md-2' %>
 
