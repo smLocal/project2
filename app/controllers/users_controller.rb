@@ -44,7 +44,7 @@ class UsersController < ApplicationController
     end
   end
 
-  def makeadmin
+  def make_admin
     @user=User.find(params[:id])
     @user.is_admin = true
     @user.save

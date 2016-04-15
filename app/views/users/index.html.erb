@@ -17,7 +17,7 @@
         then save and redirect with button -->
            ---This user is admin
         <% else %>
-            <%= button_to "make admin", make_admin_path(user), method: "patch", :class => 'btn btn-warning btn-xs active' %>
+            <%= button_to "make_admin", make_admin_path(user), method: "patch", :class => 'btn btn-warning btn-xs active' %>
         <% end %>
       <% end %>
     </li>
