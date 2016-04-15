@@ -43,7 +43,11 @@ can affect the databases differently or be locked out of making certain changes.
 * SASS
 * PostgreSQL
 * CSS3
+* Conrad
+
 
 ##Different for next time:
 * I would make sure my models were done correctly on the day I created them.
 * That means double checking my ERDs are done correctly
+* Would like experience with bootstrap resizing so that app col resize smoother.
+* Tested turbolinks issue that may be going on with search function of category.
