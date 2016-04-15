@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def index
     @users = User.all
+
   end
 
   def new
@@ -26,20 +27,37 @@ class UsersController < ApplicationController
   end
 
   def update
+    # @user = User.find(params[:id])
+    # @user.name = user_params[:is_admin]
+    # if user_params[:is_admin] != ""
+    #   @user.is_admin = user_params[:is_admin]
+    # end
+    # @user.save
+    # redirect_to '/users'
+
     @user = User.find(params[:id])
-    @user.name = user_params[:is_admin]
-    if user_params[:is_admin] != ""
-      @user.is_admin = user_params[:is_admin]
+
+    if @user.update_attributes(user_params)
+      redirect_to '/'
+    else
+      render :edit
     end
+  end
+
+  def makeadmin
+    @user=User.find(params[:id])
+    @user.is_admin = true
     @user.save
-    redirect_to '/users'
+    redirect_to '/'
 
   end
 
 private
-  def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation, :is_admin)
 
-  end
+    def user_params
+
+      params.require(:user).permit(:email, :password, :password_confirmation, :is_admin)
+    end
+
 
 end

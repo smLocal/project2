@@ -15,6 +15,7 @@ end
 
   # get 'categories' => 'categories#new'
 
+  patch 'users/:id/make_admin' => 'users#make_admin', as: :make_admin
 
   # post "/items" => 'items#create'
   # get 'items/new' => 'items#new'

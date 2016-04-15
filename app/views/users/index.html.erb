@@ -2,6 +2,7 @@
 
 <h1>Farmers Market Database</h1>
 
+<%= link_to 'View All Items', items_path %>
 <% if current_user %>
 <ul>
   <% @users.each do |user| %>
@@ -14,12 +15,13 @@
       <%= user.email %>
       <% if current_user.is_admin %>
         <% if user.is_admin %>
-        <!-- send a a post to the users controller
+        <!-- send a a patch to the users controller
         and tell it which user you want to change
         then save and redirect back here -->
-          take away admin
+
+           ---This user is admin
         <% else %>
-          make admin
+            <%= button_to "make admin", make_admin_path(user), method: "patch" %>
         <% end %>
       <% end %>
     </li>
@@ -29,5 +31,4 @@
 
 <% end %>
 
-<%= link_to 'View All Items', items_path %>
 
