@@ -29,12 +29,12 @@ another set also for users, too.
 
 ##For stretch goals: 
 * I want users to create wishlists. 
-* I want different kinds of users like managers and customers and employees that
-can affect the databases differently or be locked out of making certain changes.
 * I want to learn about Ionic and how I can convert my app.
 * I want to learn how be able to let users purchase online.
 * I want a cart for users to place and track multiple items.
 * I want to dip my toes in the css hole or have a ux person make my app sexy af.
+* I want different kinds of users like managers and customers and employees that
+can affect the databases differently or be locked out of making certain changes.
 
 ##Technologies used
 *Ruby on Rails
