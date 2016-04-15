@@ -1,7 +1,11 @@
 # Project2
 ##Farmers market inventory database
 
+###Trello
 https://trello.com/b/XVC3AVuG/farmers-market-freshbase
+
+###Heroku
+https://blooming-reaches-80659.herokuapp.com/
 
 ##About FreshBase
 I'm making an inventory control system for a farmers market in New Orleans.
@@ -64,3 +68,5 @@ internet troll.
 * That means double checking my ERDs are done correctly, too.
 * Would like experience with bootstrap resizing so that app col resize smoother.
 * Tested turbolinks issue that may be going on with search function of category.
+* Test the heroku image background eventhough someone said it would work if it
+was a local image.
