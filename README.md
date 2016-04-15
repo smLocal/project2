@@ -42,7 +42,7 @@ can affect the databases differently or be locked out of making certain changes.
 * Bootstrap
 * SASS
 * PostgreSQL
-*
+* CSS3
 
 ##Different for next time:
 * I would make sure my models were done correctly on the day I created them.
