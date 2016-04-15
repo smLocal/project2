@@ -45,6 +45,14 @@ can affect the databases differently or be locked out of making certain changes.
 * CSS3
 * Conrad
 
+##Features
+* Dynamic items list page that can list all items or by a selected category.
+* Bootstrap styling.
+* Three different views depending if you're a manager, an employee, or an
+internet troll.
+* Full CRUD on the items controller.
+* Manager can give manager permissions to employees that signup.
+
 ##Installation
 * Cd to app.
 * Install ruby gem 'bootstrap' and it's sprockets. Go to the docks.
@@ -56,4 +64,3 @@ can affect the databases differently or be locked out of making certain changes.
 * That means double checking my ERDs are done correctly, too.
 * Would like experience with bootstrap resizing so that app col resize smoother.
 * Tested turbolinks issue that may be going on with search function of category.
-* 
