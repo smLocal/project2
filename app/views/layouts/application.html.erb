@@ -7,27 +7,40 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <ul class="nav nav-pills">
+    <li role="presentation" class="active">
+      <%= link_to 'Home', users_path %>
+    </li>
 
+    <li role="presentation" class="active">
+      <%= link_to 'View All Items', items_path %>
+    </li>
 
-  <%= link_to 'Home', users_path %>
-
-  <% if current_user %>
-    <form action="/logout" method="post">
+    <% if current_user %>
+    <li role="presentation" class="active">
+      <form action="/logout" method="post">
         <input name="_method" value="DELETE" type="hidden">
         <button>Logout</button>
-    </form>
-
+      </form>
+    </li>
     <% else%>
-    <form action="/login" method="get">
-      <input name="_method" value="new" type="hidden">
-      <button>Login</button>
-    </form>
-    <br>
-    <form action="/signup" method="get">
-      <input name="_method" value="new" type="hidden">
-      <button>Signup</button>
-    </form>
-<% end %>
+
+    <li role="presentation">
+      <form action="/login" method="get">
+        <input name="_method" value="new" type="hidden">
+        <button>Login</button>
+      </form>
+    </li>
+
+    <li role="presentation">
+      <form action="/signup" method="get">
+        <input name="_method" value="new" type="hidden">
+        <button>Signup</button>
+      </form>
+    </li>
+    <% end %>
+
+  </ul>
 
 <%= yield %>
 
