@@ -13,13 +13,7 @@ Rails.application.routes.draw do
   end
 end
 
-  # get 'categories' => 'categories#new'
-
   patch 'users/:id/make_admin' => 'users#make_admin', as: :make_admin
-
-  # post "/items" => 'items#create'
-  # get 'items/new' => 'items#new'
-  # get 'items' => 'items#index'
 
   get 'signup' => 'users#new'
   post 'signup' => 'users#create'
