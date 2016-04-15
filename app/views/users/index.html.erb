@@ -1,7 +1,5 @@
 
-
 <h1 class="food-table center col-md-10 col-md-offset-1 col-xs-12">Fresh Base- the Farmers Market Database</h1>
-
 
 <% if current_user %>
 <ul class="left">
@@ -17,7 +15,7 @@
         <% if user.is_admin %>
         <!-- send a a patch to the users controller
         and tell it which user you want to change
-        then save and redirect back here -->
+        then save and redirect with button -->
            ---This user is admin
         <% else %>
             <%= button_to "make admin", make_admin_path(user), method: "patch" %>
@@ -26,8 +24,6 @@
     </li>
 
   <% end %>
-  </ul>
+</ul>
 
 <% end %>
-
-

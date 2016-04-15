@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+# my users layout
 # t.string   "email"
 # t.string   "password_digest"
 # t.boolean  "is_admin"
@@ -25,7 +26,6 @@ User.create({
 })
 
 # admin user
-
 User.create({
   email: "2@gmail.com",
   password: "123",
@@ -33,12 +33,14 @@ User.create({
   is_admin: true
 })
 
+# category
 categories = Category.create([
     {name: 'veggies'},
     {name: 'fruit'},
     {name: 'spreads'}
   ])
 
+# item
 Category.first.items.create([
   {
     name: "Carrot",
@@ -47,30 +49,3 @@ Category.first.items.create([
     unit_price: 1
   }
 ])
-
-# t.string   "name"
-# t.integer  "quantity"
-# t.integer  "case_price"
-# t.integer  "unit_price"
-# t.integer  "category_id"
-# t.string   "type"
-# Item.create({
-#     name: "Orange",
-#     quantity: 40,
-#     case_price: 12,
-#     unit_price: 2,
-#     category_id: 11,
-#     type: ""
-#   })
-
-
-
-# Item.create([
-#   {
-#     name: "Orange",
-#     quantity: 40,
-#     case_price: 12,
-#     unit_price: 2,
-#     category: "fruit"
-#   }
-# ])
