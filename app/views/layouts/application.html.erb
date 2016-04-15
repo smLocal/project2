@@ -5,42 +5,53 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale">
 </head>
-<body>
+<body id = "all">
   <ul class="nav nav-pills">
     <li role="presentation" class="active">
       <%= link_to 'Home', users_path %>
     </li>
 
-    <li role="presentation" class="active">
+    <li role="presentation" >
       <%= link_to 'View All Items', items_path %>
     </li>
 
     <% if current_user %>
+
+
+
     <li role="presentation" class="active">
       <form action="/logout" method="post">
         <input name="_method" value="DELETE" type="hidden">
         <button>Logout</button>
       </form>
     </li>
+  </ul>
     <% else%>
+<!-- <div class="btn-group" role="group" aria-label="...">
+  <button type="button" class="btn btn-default">Left</button>
+  <button type="button" class="btn btn-default">Middle</button>
+  <button type="button" class="btn btn-default">Right</button>
+</div> -->
+    <div class="row" role="group" aria-label="..." >
 
-    <li role="presentation">
       <form action="/login" method="get">
         <input name="_method" value="new" type="hidden">
-        <button>Login</button>
+        <button type="button" class="btn btn-default">Login</button>
       </form>
-    </li>
 
-    <li role="presentation">
+
+
       <form action="/signup" method="get">
         <input name="_method" value="new" type="hidden">
-        <button>Signup</button>
+        <button type="button" class="btn btn-default">Signup</button>
       </form>
-    </li>
+
+    </div>
     <% end %>
 
-  </ul>
+
 
 <%= yield %>
 
