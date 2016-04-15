@@ -35,3 +35,15 @@ can affect the databases differently or be locked out of making certain changes.
 * I want to learn how be able to let users purchase online.
 * I want a cart for users to place and track multiple items.
 * I want to dip my toes in the css hole or have a ux person make my app sexy af.
+
+##Technologies used
+*Ruby on Rails
+*Embedded Ruby 
+*Bootstrap
+*SASS
+*PostgreSQL
+*
+
+##Different for next time
+*I would make sure my models were done correctly on the day I created them.
+**That means double checking my ERDs are done correctly
