@@ -13,7 +13,7 @@
       <%= link_to 'Home', users_path %>
     </li>
 
-    <li role="presentation" >
+    <li role="presentation" class="active">
       <%= link_to 'View All Items', items_path %>
     </li>
 
@@ -24,31 +24,29 @@
     <li role="presentation" class="active">
       <form action="/logout" method="post">
         <input name="_method" value="DELETE" type="hidden">
-        <button>Logout</button>
+        <button class="btn btn-danger">Logout</button>
       </form>
     </li>
-  </ul>
+
     <% else%>
 <!-- <div class="btn-group" role="group" aria-label="...">
   <button type="button" class="btn btn-default">Left</button>
   <button type="button" class="btn btn-default">Middle</button>
   <button type="button" class="btn btn-default">Right</button>
 </div> -->
-    <div class="row" role="group" aria-label="..." >
-
-      <form action="/login" method="get">
-        <input name="_method" value="new" type="hidden">
-        <button type="button" class="btn btn-default">Login</button>
-      </form>
-
-
-
+  <li role="presentation" class="active">
       <form action="/signup" method="get">
         <input name="_method" value="new" type="hidden">
-        <button type="button" class="btn btn-default">Signup</button>
+        <button class="btn btn-danger">Signup</button>
       </form>
-
-    </div>
+    </li>
+  <li role="presentation" class="active">
+    <form action="/login" method="get">
+        <input name="_method" value="new" type="hidden">
+        <button class="btn btn-primary">Login</button>
+      </form>
+    </li>
+</ul>
     <% end %>
 
 
