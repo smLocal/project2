@@ -2,9 +2,9 @@
 
 <p class="showy food-table col-md-6 col-md-offset-3 col-xs-12">
   We currently stock <%= @item.quantity %> of these <%= @item.category.name %> at
-  $<%= @item.case_price %> a case, which translates to $<%= @item.unit_price %> each.
+  $<%= @item.case_price %> a case, or you can buy them at $<%= @item.unit_price %> each.
   To edit (and get all this info on the same page), you must be logged in. Then, click edit in 'View All Items' page.
-  Thank you for checking out my site! And, no... I'm not a mathematician  ¯\_(ツ)_/¯
+  Thank you for checking out my site!
 </p>
 
 <%= link_to "Back to Total Items", items_path, :class => 'btn btn-warning btn-md active col-md-offset-10 col-xs-5 col-md-2' %>
