@@ -20,13 +20,14 @@ class ItemsController < ApplicationController
     category_name = params[:item][:category]
     @category = Category.find_by(name: category_name)
     @item = @category.items.create(
-        name:params[:item][:name],
-        quantity:params[:item][:quantity],
-        case_price:params[:item][:case_price],
-        unit_price:params[:item][:unit_price]
+        name:params[:item][:name] || "",
+        quantity:params[:item][:quantity] || "",
+        case_price:params[:item][:case_price] || "",
+        unit_price:params[:item][:unit_price] || ""
         )
     redirect_to '/items'
   end
+
 
 
   def new
