@@ -1,12 +1,12 @@
 <h1 class="left">Login</h1>
-<form class= "left" action="/login" method="post">
+<form action="/login" method="post">
   <label>Email</label>
-  <input name="email" type="email" >
+  <input name="email" type="email">
 
   <label>Password</label>
-  <input name="password" type="password" >
+  <input name="password" type="password">
 
-  <button type="button" class="btn btn-success">Login</button>
+  <button class="btn btn-success">Login</button>
 </form>
 <br>
 <%= link_to 'Back', users_path, :class => 'type="button" class="btn btn-warning' %>
