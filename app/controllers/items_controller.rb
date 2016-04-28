@@ -18,7 +18,7 @@ class ItemsController < ApplicationController
 
   def create
     category_name = params[:item][:category]
-    @category = Category.find_by(name: category_name)
+    if @category = Category.find_by(name: category_name)
     @item = @category.items.create(
         name:params[:item][:name] || "",
         quantity:params[:item][:quantity] || "",
@@ -27,6 +27,8 @@ class ItemsController < ApplicationController
         )
     redirect_to '/items'
   end
+    else redirect_to '/items'
+end
 
 
 
