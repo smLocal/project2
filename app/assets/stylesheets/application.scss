@@ -38,11 +38,21 @@
 .left {
   text-align: left;
   color: rgba(26, 226, 6, 1);
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .center {
   text-align: center;
-  color: rgba(43, 180, 41, .66);
+  color: rgba(26, 226, 6, 1);
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .showy {
