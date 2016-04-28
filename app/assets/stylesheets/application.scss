@@ -14,6 +14,22 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.black {
+  color: black;
+}
+
+#middle {
+  width: 2vw;
+    height: 2vw;
+   position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto
+}
+
 .left {
   text-align: left;
   color: rgba(26, 226, 6, 1);

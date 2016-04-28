@@ -12,7 +12,7 @@
     t.string   "category" -->
     <div class="row">
 <div class="col-md-10 col-md-offset-1 col-xs-12">
-<table class="food-table table table-hover">
+<table class="food-table black table table-hover">
   <thead>
     <tr>
       <th class="tab">Name</th>
@@ -24,7 +24,7 @@
       <%= form_tag items_path, :method => 'get' do %>
         <p>
         <%= select_tag :search, options_for_select(@search_options)  %>
-        <%= submit_tag "Search", :name => :nil %>
+        <%= submit_tag "Search", :name => :nil, :class => 'btn btn-success btn-xs active' %>
         </p>
       <% end %>
 
