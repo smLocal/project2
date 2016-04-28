@@ -1,4 +1,4 @@
-<h1>Sign Up</h1>
+<h1 class="left">Sign Up</h1>
 
 <form action="/signup" method="post">
   <label>Email</label>
@@ -10,7 +10,7 @@
   <label>Password Confirmation</label>
   <input name="password_confirmation" type="password" placeholder="Password Confirmation">
 
-  <button>Sign Up</button>
+  <button class="btn btn-success">Sign Up</button>
 </form>
 <br>
-<%= link_to 'Back', users_path %>
+<%= link_to 'Back', users_path, :class => 'type="button" class="btn btn-warning' %>
