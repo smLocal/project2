@@ -5,7 +5,7 @@
 https://trello.com/b/XVC3AVuG/farmers-market-freshbase
 
 ###Heroku
-https://blooming-reaches-80659.herokuapp.com/
+https://lafreshmarket.herokuapp.com/
 
 ##About FreshBase
 I'm making an inventory control system for a farmers market in New Orleans.
