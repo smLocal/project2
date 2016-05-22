@@ -26,10 +26,11 @@ class ItemsController < ApplicationController
         unit_price:params[:item][:unit_price] || ""
         )
     redirect_to '/items'
-  end
-    else redirect_to '/items'
+  else
+    @category === 'fruit'
+    redirect_to '/items'
 end
-
+end
 
 
   def new
