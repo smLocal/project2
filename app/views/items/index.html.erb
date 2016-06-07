@@ -24,9 +24,9 @@
       <%= form_tag items_path, :method => 'get' do %>
         <p>
         <%= select_tag :search, options_for_select(@search_options)  %>
-        <%= submit_tag "Search", :name => :nil, :class => 'btn btn-danger btn-xs active' %>
+        <%= submit_tag "Search", :name => :nil, :class => 'btn btn-primary btn-xs active' %>
         </p>
-      <% end %>info
+      <% end %>
 
       <% if current_user && current_user.is_admin %>
         <th><%= link_to 'New Item', new_item_path, :class => 'btn btn-warning btn-xs active' %></th>
