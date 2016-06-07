@@ -46,14 +46,10 @@
 }
 
 .center {
-  font-weight: bold;
   text-align: center;
-  color: rgba(26, 226, 6, 1);
-  text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+  color: #337ab7;
+  text-outline: 2px 2px #ff0000;
+  text-shadow: -1px -1px 1px #000, 1px 1px 1px #ccc;
 }
 
 .showy {
